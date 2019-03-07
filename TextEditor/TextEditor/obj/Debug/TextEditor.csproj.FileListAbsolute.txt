@@ -13,3 +13,4 @@ C:\Users\cody\Desktop\TextEditor\TextEditor\TextEditor\obj\Debug\TextEditor.cspr
 C:\Users\cody\Desktop\TextEditor\TextEditor\TextEditor\obj\Debug\TextEditor.csproj.CoreCompileInputs.cache
 C:\Users\cody\Desktop\TextEditor\TextEditor\TextEditor\obj\Debug\TextEditor.exe
 C:\Users\cody\Desktop\TextEditor\TextEditor\TextEditor\obj\Debug\TextEditor.pdb
+C:\Users\cody\Desktop\TextEditor\TextEditor\TextEditor\obj\Debug\TemplateDesigns.baml
