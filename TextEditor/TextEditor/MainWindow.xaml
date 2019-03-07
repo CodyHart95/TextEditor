@@ -28,7 +28,7 @@
 
                 <RichTextBox Name="MainTextBox" Grid.Column="1"
                          Background="#FF1E1E1E" Foreground="White" BorderBrush="#FF1E1E1E"
-                         AcceptsTab="True" HorizontalScrollBarVisibility="Visible"  />
+                         AcceptsTab="True" HorizontalScrollBarVisibility="Visible" PreviewKeyDown="MainTextBox_PreviewKeyDown"  />
             </Grid>
         </ScrollViewer>
     </Grid>

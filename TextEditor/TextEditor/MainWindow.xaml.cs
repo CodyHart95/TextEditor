@@ -24,5 +24,27 @@ namespace TextEditor
         {
             InitializeComponent();
         }
+
+        private void AddLineNum()
+        {
+
+        }
+
+        private void RemoveLineNum()
+        {
+
+        }
+        private void MainTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter || e.Key == Key.Return)
+            {
+                AddLineNum();
+            }
+
+            else if(e.Key == Key.Back)
+            {
+                RemoveLineNum();
+            }
+        }
     }
 }
