@@ -7,14 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Background="#FF3F3F46" Foreground="White">
+            <MenuItem Header="_File"/>
+            <MenuItem Header="_Edit"/>
+            <MenuItem Header="_View"/>
+        </Menu>
+        <ScrollViewer Grid.Row="1">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition MaxWidth="50" />
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Name="LineNumber" Grid.Column="0" Text="1"
-                       Foreground="#FF865FC5" Background="#FF1D1D1F"
+                       Foreground="#FFB587FF" Background="#FF3F3F46"
                        TextAlignment="Center"/>
 
                 <RichTextBox Name="MainTextBox" Grid.Column ="1"
