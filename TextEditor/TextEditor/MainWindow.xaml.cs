@@ -20,6 +20,7 @@ namespace TextEditor
     /// </summary>
     public partial class MainWindow : Window
     {
+        int curLineNum = 1;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace TextEditor
 
         private void AddLineNum()
         {
-
+            curLineNum += 1;
+            LineNumber.Text += $"\n\n{curLineNum}";
         }
 
         private void RemoveLineNum()
