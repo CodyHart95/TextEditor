@@ -25,11 +25,10 @@
                 <TextBlock Name="LineNumber" Grid.Column="0" Text="1"
                        Foreground="#FFB587FF" Background="#FF3F3F46"
                        TextAlignment="Center"/>
-                <ScrollViewer Grid.Column ="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Padding="0">
-                <RichTextBox Name="MainTextBox" 
+
+                <RichTextBox Name="MainTextBox" Grid.Column="1"
                          Background="#FF1E1E1E" Foreground="White" BorderBrush="#FF1E1E1E"
-                         AcceptsTab="True"  />
-                </ScrollViewer>
+                         AcceptsTab="True" HorizontalScrollBarVisibility="Visible"  />
             </Grid>
         </ScrollViewer>
     </Grid>
