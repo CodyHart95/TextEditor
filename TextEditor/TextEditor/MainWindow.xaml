@@ -16,7 +16,7 @@
             <MenuItem Header="_Edit"/>
             <MenuItem Header="_View"/>
         </Menu>
-        <ScrollViewer Grid.Row="1">
+        <ScrollViewer Grid.Row="1" Margin="0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition MaxWidth="50" />
@@ -25,10 +25,11 @@
                 <TextBlock Name="LineNumber" Grid.Column="0" Text="1"
                        Foreground="#FFB587FF" Background="#FF3F3F46"
                        TextAlignment="Center"/>
-
-                <RichTextBox Name="MainTextBox" Grid.Column ="1"
+                <ScrollViewer Grid.Column ="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Padding="0">
+                <RichTextBox Name="MainTextBox" 
                          Background="#FF1E1E1E" Foreground="White" BorderBrush="#FF1E1E1E"
                          AcceptsTab="True"  />
+                </ScrollViewer>
             </Grid>
         </ScrollViewer>
     </Grid>
