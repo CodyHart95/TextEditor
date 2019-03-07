@@ -34,8 +34,19 @@ namespace TextEditor
 
         private void RemoveLineNum()
         {
-
+            TextPointer beforeCaret = MainTextBox.CaretPosition.GetPositionAtOffset(-3);
+            if (beforeCaret != null)
+            {               
+                string caretLeftChar = new TextRange(beforeCaret, MainTextBox.CaretPosition).Text;
+                if (caretLeftChar.Contains("\n"))
+                {
+                    curLineNum -= 1;
+                    LineNumber.Text = LineNumber.Text.Substring(0, LineNumber.Text.Length - 3);
+                }
+            }
         }
+
+
         private void MainTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if(e.Key == Key.Enter || e.Key == Key.Return)
