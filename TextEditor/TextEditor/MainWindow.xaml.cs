@@ -59,5 +59,7 @@ namespace TextEditor
                 RemoveLineNum();
             }
         }
+
+       
     }
 }

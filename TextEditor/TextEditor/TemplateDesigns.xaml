@@ -159,9 +159,11 @@
                 <ColumnDefinition Width="0.00001*" />
                 <ColumnDefinition MaxWidth="18" />
             </Grid.ColumnDefinitions>
-            <Border Grid.ColumnSpan="3"
-            CornerRadius="2"
-            Background="#F0F0F0" />
+            <Border Grid.ColumnSpan="3">
+                <Border.Background>
+                    <SolidColorBrush Color="{StaticResource ControlDarkColor}"/>
+                </Border.Background>
+            </Border>
             <RepeatButton Grid.Column="0"
                   Style="{StaticResource ScrollBarLineButton}"
                   Width="18"
@@ -176,39 +178,7 @@
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
                     <Thumb Style="{StaticResource ScrollBarThumb}"
-               Margin="0,1,0,1">
-
-                        <Thumb.BorderBrush>
-
-                            <LinearGradientBrush StartPoint="0,0"
-                                 EndPoint="1,0">
-                                <LinearGradientBrush.GradientStops>
-                                    <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource BorderLightColor}"
-                                Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource BorderDarkColor}"
-                                Offset="1.0" />
-                                    </GradientStopCollection>
-                                </LinearGradientBrush.GradientStops>
-                            </LinearGradientBrush>
-
-                        </Thumb.BorderBrush>
-                        <Thumb.Background>
-
-                            <LinearGradientBrush StartPoint="0,0"
-                                 EndPoint="0,1">
-                                <LinearGradientBrush.GradientStops>
-                                    <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource ControlLightColor}"
-                                Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource ControlMediumColor}"
-                                Offset="1.0" />
-                                    </GradientStopCollection>
-                                </LinearGradientBrush.GradientStops>
-                            </LinearGradientBrush>
-
-                        </Thumb.Background>
-                    </Thumb>
+                            Margin="1,0,1,0"/>
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
                     <RepeatButton Style="{StaticResource ScrollBarPageButton}"
@@ -250,6 +220,8 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
+    
     <Style x:Key="ScrollViewerStyle"
        TargetType="{x:Type ScrollViewer}">
         <Setter Property="OverridesDefaultStyle"
@@ -281,6 +253,7 @@
                      ViewportSize="{TemplateBinding ViewportHeight}"
                      Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" HorizontalAlignment="Right" Background="#FF3F3F46"/>
                         <ScrollBar x:Name="PART_HorizontalScrollBar"
+                     Style = "{StaticResource ScrollBarStyle}"
                      Orientation="Horizontal"
                      Grid.Row="1"
                      Grid.Column="1"

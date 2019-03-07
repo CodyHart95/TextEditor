@@ -19,19 +19,20 @@
             <MenuItem Header="_Edit"/>
             <MenuItem Header="_View"/>
         </Menu>
-        <ScrollViewer Grid.Row="1" Margin="0" Style="{StaticResource ScrollViewerStyle}">
-            <Grid>
+        <ScrollViewer Grid.Row="1" Margin="0" Style="{StaticResource ScrollViewerStyle}" HorizontalScrollBarVisibility="Visible">
+            <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition MaxWidth="50" />
+                    <ColumnDefinition MinWidth="50" MaxWidth="50" />
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Name="LineNumber" Grid.Column="0" Text="1"
                        Foreground="#FFB587FF" Background="#FF3F3F46"
-                       TextAlignment="Center"/>
-
-                <RichTextBox Name="MainTextBox" Grid.Column="1"
+                       TextAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+                
+                    <RichTextBox Name="MainTextBox" Grid.Column="1"
                          Background="#FF1E1E1E" Foreground="White" BorderBrush="#FF1E1E1E"
-                         AcceptsTab="True" HorizontalScrollBarVisibility="Visible" PreviewKeyDown="MainTextBox_PreviewKeyDown"  />
+                         AcceptsTab="True" PreviewKeyDown="MainTextBox_PreviewKeyDown" ScrollViewer.CanContentScroll="True" MinWidth="800" MinHeight="800" />
+        
             </Grid>
         </ScrollViewer>
     </Grid>
